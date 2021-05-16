@@ -24,4 +24,5 @@ public class GetRestController {
 	public String printNameUsingPathParam(@PathVariable String name) {
 		return "Hello, " + name + " From Bridgelabz with Path!";
 	}
+
 }
