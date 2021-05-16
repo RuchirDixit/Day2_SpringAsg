@@ -11,6 +11,7 @@ import com.example.demo.model.User;
 @RequestMapping("/post")
 public class PostRestController {
 
+	// POST api with User DTO
 	@PostMapping("/addUser")
 	public String addUser(@RequestBody User user) {
 		return "Hello, " + user.getFirstName() + " " + user.getLastName() + " From BridgeLabz!";
