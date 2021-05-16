@@ -10,16 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class GetRestController {
 
+	// GET API to print hello
 	@RequestMapping(value = {"","/"})
 	public String sayHello() {
 		return "Hello From Bridgelabz!";
 	}
 	
+	// GET API to print name with query parameter
 	@GetMapping(value = {"/query"})
 	public String printNameUsingQueryParam(@RequestParam(value = "name") String name) {
 		return "Hello, " + name + " From Bridgelabz!";
 	}
 	
+	// GET API to print name with path parameter
 	@GetMapping(value = {"/param/{name}"})
 	public String printNameUsingPathParam(@PathVariable String name) {
 		return "Hello, " + name + " From Bridgelabz with Path!";
